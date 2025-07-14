@@ -1,0 +1,18 @@
+# Core numerical + audio tools
+numpy
+scipy
+sounddevice
+torchaudio
+
+fasterwhisper
+ffmpeg-python
+
+# Emotion from audio (simulated for now)
+# If using speechbrain in future: 
+# speechbrain
+
+# TTS (Coqui TTS)
+TTS
+
+# Environment and utility
+python-dotenv
