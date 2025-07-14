@@ -1,7 +1,7 @@
-# 🧠 Omani Arabic Mental Health Voice Assistant
+# Omani Arabic Mental Health Voice Assistant
 
 A culturally adapted, voice-enabled mental health support assistant designed for Arabic speakers in Oman. It uses speech recognition, large language models (GPT-4o and Claude Opus), and text-to-speech to provide empathetic, non-judgmental responses in Omani Arabic.
-
+![Diagram](image/ai_counsels.png)
 ---
 
 ## 📌 Features
@@ -31,53 +31,46 @@ A culturally adapted, voice-enabled mental health support assistant designed for
 
 1. **Clone the Repository**
 
-   ```bash
-   git clone https://github.com/yourusername/omani-mental-health-assistant.git
+   ```
+   git clone https://github.com/tolulopeelijah/omani-mental-health-assistant.git
    cd omani-mental-health-assistant
-Create Environment
+   ```
+2. Create Environment
 
-bash
-Copy
-Edit
+```
 conda create -n omani_mental_agent python=3.10
 conda activate omani_mental_agent
-Install Dependencies
+```
+3. Install Dependencies
 
-bash
-Copy
-Edit
+```
 pip install -r requirements.txt
-Set API Keys
+```
+4. Set API Keys
 
 Create a .env file in the root directory with your credentials:
 
-ini
-Copy
-Edit
+```
 OPENAI_API_KEY=your-openai-key
 CLAUDE_API_KEY=your-anthropic-key
-Run the App
+```
+5. Run the App
 
-bash
-Copy
-Edit
-python app.py
+```
+python gradio_interface.py
+```
 This launches the Gradio interface for real-time voice interaction.
 
-🧪 Testing
+6. Testing
 Unit and integration tests are located in the tests/ directory.
 
 Run all tests:
 
-bash
-Copy
-Edit
+```
 pytest tests/
-📁 Project Structure
-bash
-Copy
-Edit
-.
+```
+Project Structure
+```
 ├── app.py                  # Gradio interface
 ├── main.py                 # CLI-based pipeline runner
 ├── llm/
@@ -94,7 +87,9 @@ Edit
 │   └── logger.py           # Handles JSON logging per interaction
 ├── .env                    # API keys
 └── requirements.txt
-🛡️ Safety & Ethics
+```
+
+### Safety & Ethics
 Suicide risk escalation triggers (future scope).
 
 Cultural appropriateness checked through prompt design.
@@ -103,14 +98,14 @@ No storage of sensitive data without consent.
 
 Responses avoid hallucinations via prompt constraints and fallback monitoring.
 
-📈 Performance
+### Performance
 Average GPT-4o latency: ~3.5s (may vary due to network).
 
-Claude Opus used if timeout exceeds 8–10s.
+Claude Opus used if timeout exceeds7s.
 
 Logs saved for every interaction.
 
-🧭 Future Roadmap
+### Future Roadmap
 Deploy to cloud server with Docker support.
 
 Integrate real-time escalation and referral systems.
@@ -119,5 +114,5 @@ Fine-tune Arabic LLM for offline use.
 
 Expand dialect support beyond Omani Arabic.
 
-Demo Video
+### Demo Video
 Watch the Demo (YouTube Link)
