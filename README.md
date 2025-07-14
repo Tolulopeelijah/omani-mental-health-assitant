@@ -1,7 +1,9 @@
 # Omani Arabic Mental Health Voice Assistant
 
 A culturally adapted, voice-enabled mental health support assistant designed for Arabic speakers in Oman. It uses speech recognition, large language models (GPT-4o and Claude Opus), and text-to-speech to provide empathetic, non-judgmental responses in Omani Arabic.
-![Diagram](image/ai_counsels.jpeg)
+
+<img src="image/ai_counsels.jpeg" alt="ai support image" width="600"/>
+
 ---
 
 ## 📌 Features
