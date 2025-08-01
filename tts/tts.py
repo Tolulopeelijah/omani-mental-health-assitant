@@ -13,7 +13,7 @@ def synthesize(text: str, output_dir="data/samples", filename=None):
     
     tts = gTTS(text=text, lang='ar') 
     tts.save(output_path)
-    print(f"TTS saved to {output_path}")
+    # print(f"TTS saved to {output_path}")
     return output_path
 
 samples = {

@@ -1,11 +1,11 @@
 from faster_whisper import WhisperModel
 import os
 
-# You can change model size to "base", "small", etc. if needed
-MODEL_SIZE = "tiny"  # small, medium also available
+
+MODEL_SIZE = "tiny"  
 LANGUAGE_CODE = "ar"  # Arabic
 
-# Load the model (can load once and reuse)
+# Loading the model
 print("Loading ASR model...")
 model = WhisperModel(MODEL_SIZE, compute_type="int8")  # use "int8" for speed
 print("ASR model loaded.")
@@ -36,7 +36,7 @@ def transcribe_audio(audio_path: str) -> dict:
     return {
         "text": full_text.strip(),
         "segments": all_segments,
-        "language": info.language  # usually "ar"
+        "language": info.language 
     }
 
 

@@ -13,7 +13,7 @@ class SessionLogger:
             "turns": []
         }
 
-    def log_turn(self, asr_output, llm_input, llm_model, llm_response, tts_path, latency):
+    def log_turn(self, asr_output, llm_input, llm_model, llm_response, tts_path, latencies):
         turn = {
             "timestamp": datetime.now().isoformat(),
             "asr_output": asr_output,
@@ -21,7 +21,7 @@ class SessionLogger:
             "llm_model": llm_model,
             "llm_response": llm_response,
             "tts_path": tts_path,
-            "latency_seconds": round(latency, 2)
+            "latency_seconds": latencies
         }
         self.log_data["turns"].append(turn)
         self._save()

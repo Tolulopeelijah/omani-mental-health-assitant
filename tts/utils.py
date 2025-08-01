@@ -1,5 +1,3 @@
-# tts/utils.py
-
 import soundfile as sf
 import os
 from datetime import datetime
@@ -21,7 +19,6 @@ def save_wav(audio_data, sample_rate=22050, save_dir="../data/logs"):
     filename = f"response_{timestamp}.wav"
     path = os.path.join(save_dir, filename)
 
-    # Ensure audio is at least 2D for compatibility with sf.write
     if isinstance(audio_data, np.ndarray) and audio_data.ndim == 1:
         audio_data = audio_data.reshape(-1, 1)
 

@@ -21,24 +21,24 @@ def record_audio(filename="output.wav", duration=5, samplerate=16000, channels=1
     os.makedirs(save_dir, exist_ok=True)
     full_path = os.path.join(save_dir, filename)
 
-    print(f"🎙️ Recording for {duration} seconds...")
+    print(f"Recording for {duration} seconds...")
 
     try:
         audio = sd.rec(int(duration * samplerate), samplerate=samplerate,
                        channels=channels, dtype='float32')
         sd.wait()  # Wait until recording is finished
         sf.write(full_path, audio, samplerate)
-        print(f"✅ Saved to {full_path}")
+        print(f"Saved to {full_path}")
         return audio
     except Exception as e:
-        print(f"❌ Recording failed: {e}")
+        print(f"Recording failed: {e}")
         return None
 
 def generate_timestamped_filename(prefix="audio"):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     return f"{prefix}_{timestamp}.wav"
 
-# Example usage (uncomment to test):
+# Example usage:
 # if __name__ == "__main__":
 #     fname = generate_timestamped_filename()
 #     audio_data = record_audio(filename=fname, duration=4)

@@ -5,8 +5,9 @@ soundfile
 torchaudio
 openai
 anthropic
-pytest
-fasterwhisper
-ffmpeg-python
+# pytest
+# faster-whisper
+# ffmpeg-python
+gtts
 gradio
 python-dotenv

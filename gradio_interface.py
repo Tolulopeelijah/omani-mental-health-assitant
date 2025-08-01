@@ -11,7 +11,7 @@ from logger import SessionLogger
 
 
 # Initialize logger (one per session)
-logger = SessionLogger(log_dir="data/logs")  # or create a separate folder like "data/ui_logs"
+logger = SessionLogger(log_dir="data/logs") 
 
 # Helper: End-to-end processing function
 def process_audio(audio):

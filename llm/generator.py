@@ -26,7 +26,7 @@ async def generate_with_gpt(prompt: str) -> str:
         return response.choices[0].message.content.strip()
     except Exception as e:
         print("GPT-4o failed:", e)
-        raise
+        
 
 # Claude Generator
 async def generate_with_claude(prompt: str) -> str:
